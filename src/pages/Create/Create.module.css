@@ -1,0 +1,94 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  margin-top: 25px;
+}
+.list {
+  font-family: cursive;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 15px 15px;
+}
+.formVerbs {
+  width: 180px;
+  height: 35px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 35px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  padding: 0;
+  border: 2px solid rgb(105, 104, 104);
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+}
+.example {
+  width: 600px;
+  height: 75px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 35px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  padding: 0;
+  border: 2px solid rgb(105, 104, 104);
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+}
+.example::placeholder {
+  font-family: cursive;
+  font-size: 13px;
+  padding-left: 9px;
+  transition: 0.5s;
+}
+.formVerbs::placeholder {
+  font-family: cursive;
+  font-size: 13px;
+  padding-left: 9px;
+  transition: 0.5s;
+}
+.line {
+  width: 210px;
+  color: rgb(105, 104, 104);
+}
+
+:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+:focus::-moz-placeholder {
+  color: transparent;
+}
+:focus:-moz-placeholder {
+  color: transparent;
+}
+:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.levels {
+  width: 180px;
+  height: 35px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 35px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  padding: 0;
+  border: 2px solid rgb(105, 104, 104);
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+}
+button {
+  display: block;
+  width: 150px;
+  height: 45px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: brown;
+  color: white;
+  border: none;
+}
+.title {
+  padding-bottom: 10px;
+}

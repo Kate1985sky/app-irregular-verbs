@@ -1,7 +1,7 @@
 .item {
     text-decoration: none;
     padding: 15px;
-    font-size: 26px;
+    font-size: 23px;
     font-family: cursive;
     color: black;
     background-color: antiquewhite;
@@ -10,9 +10,7 @@
 }
 .item:last-child {
     background-color:brown;
+    color: white;
 }
-hr {
-    width: inherit;
-    margin-top:30px;
-}
+
 

@@ -21,7 +21,6 @@ export const Navigation = () => {
           + create
         </Link>
       </ul>
-      <hr />
     </nav>
     
     

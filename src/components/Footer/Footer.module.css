@@ -1,0 +1,15 @@
+.wrapper {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    margin-top: auto;
+}
+
+.title {
+    font-family: cursive;
+    font-size: 15px;
+    font-weight: 500;
+}
