@@ -7,19 +7,17 @@ export const Create = () => {
     ? JSON.parse(localStorage.getItem("list"))
     : [];
   const [input, setInput] = useState(itemLocalStorage);
-  
 
   useEffect(() => {
     localStorage.setItem("list", JSON.stringify(input));
   }, [input]);
 
   function changeHeandler(event) {
-    const value = event.target.value;
-    setInput([...input, { [event.target.name]: value }]);
+    setInput({ ...input, [event.target.name]: event.target.value });
   }
-  console.log(input);
 
-  function submitForm() {
+  function submitForm(e) {
+    e.preventDefault();
     setInput("");
   }
 
@@ -31,28 +29,22 @@ export const Create = () => {
             <label>
               Add forms of a word
               <input
-                checked={"1st form"}
                 onChange={changeHeandler}
-                value={input}
-                required
+                value={input["1st form"]}
                 type="text"
                 name="1st form"
                 className={style.formVerbs}
               />
               <input
-                checked={"2st form"}
                 onChange={changeHeandler}
-                value={input}
-                required
+                value={input["2st form"]}
                 type="text"
                 name="2st form"
                 className={style.formVerbs}
               />
               <input
-                checked={"3st form"}
                 onChange={changeHeandler}
-                value={input}
-                required
+                value={input["3st form"]}
                 type="text"
                 name="3st form"
                 className={style.formVerbs}
@@ -63,10 +55,8 @@ export const Create = () => {
             <label>
               Add an example of usage
               <input
-                checked={"example of usage"}
                 onChange={changeHeandler}
-                value={input}
-                required
+                value={input["example of usage"]}
                 type="text"
                 name="example of usage"
                 className={style.example}
@@ -77,10 +67,8 @@ export const Create = () => {
             <label>
               Add translations
               <input
-                checked={"translate of the world"}
                 onChange={changeHeandler}
-                value={input}
-                required
+                value={input["translate of the world"]}
                 type="text"
                 name="translate of the world"
                 className={style.formVerbs}
@@ -88,10 +76,8 @@ export const Create = () => {
               />
               <br />
               <input
-                required
-                checked={"translate of the example"}
                 name="translate of the example"
-                value={input}
+                value={input["translate of the example"]}
                 onChange={changeHeandler}
                 className={style.example}
                 type="text"
@@ -102,7 +88,7 @@ export const Create = () => {
 
             <span className={style.title}>A level of the word</span>
             <select
-              value={input}
+              value={input["levels"]}
               className={style.levels}
               name="levels"
               onChange={changeHeandler}
