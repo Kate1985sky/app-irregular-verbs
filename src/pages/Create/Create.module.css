@@ -7,13 +7,16 @@
 }
 .form {
   margin-top: 25px;
+  margin-bottom: 20px;
 }
+
 .list {
   font-family: cursive;
   font-size: 18px;
   font-weight: 500;
   padding: 15px 15px;
 }
+
 .formVerbs {
   width: 180px;
   height: 35px;
@@ -91,4 +94,10 @@ button {
 }
 .title {
   padding-bottom: 10px;
+}
+.titleMain {
+  font-family: cursive;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 0;
 }

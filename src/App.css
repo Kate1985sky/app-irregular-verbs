@@ -1,8 +1,1 @@
 
-.main {
-  overflow: hidden;
-  min-width: 800px;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
