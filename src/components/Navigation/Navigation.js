@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Navigation.module.css";
+import { useEditor } from "../../hooks/EditorProvider";
 
 export const Navigation = () => {
+  const value = useEditor();
+
   return (
    
     <nav className={styles.container}>

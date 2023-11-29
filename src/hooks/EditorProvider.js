@@ -2,45 +2,32 @@ import React, { useContext, useEffect, useState } from "react";
 
 const EditorContext = React.createContext(null);
 
-const EditorProvider = ({ children, dataKey = "list" }) => {
+const EditorProvider = ({ children, dataKey = "irregular-verbs-store" }) => {
   const itemLocalStorage = localStorage.getItem(dataKey)
     ? JSON.parse(localStorage.getItem(dataKey))
     : [];
 
-  const [input, setInput] = useState(itemLocalStorage);
-
-  function changeHeandler(event) {
-    value.setInput({ ...value.input, [event.target.name]: event.target.value });
-  }
-
-  function onSubmit(text) {
-    const item = {
-      value: text,
-    };
-    setInput(() => [...input, item]);
-  }
-
-  function submitForm() {
-    onSubmit(input);
-    setInput("");
-  }
-
-  function onKeyDown(event) {
-    event.preventDefault();
-    onSubmit(input);
-  }
+  const [words, setWords] = useState(itemLocalStorage);
 
   useEffect(() => {
-    localStorage.setItem(dataKey, JSON.stringify(input));
-  }, [input]);
+    localStorage.setItem(dataKey, JSON.stringify(words));
+  }, [words]);
+
+  const addWord = (newWord) => {
+    setWords((prev) => [
+      ...prev,
+      {
+        ...newWord,
+        id: crypto.randomUUID(),
+        completed: false
+      }
+    ])
+  };
 
   const value = {
-    input,
-    setInput,
-    changeHeandler,
-    submitForm,
-    onKeyDown,
-    onSubmit
+    words,
+    addWord,
+    setWords
   };
 
   return (

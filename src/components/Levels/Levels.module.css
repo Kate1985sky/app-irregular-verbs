@@ -1,0 +1,22 @@
+.filter {
+    display: flex;
+    justify-content: center;
+}
+.btn {
+    width: 45px;
+    height: 35px;
+    background-color:white;
+    border: 1px solid brown;
+    color: brown;
+    cursor: pointer;
+}
+.btn:first-child {
+    width: 65px;
+    height: 35px;
+    background-color: brown;
+    color: white;
+}
+.btn:hover {
+    background-color:rgb(233, 204, 168);
+    transition: 0.5s;
+}
