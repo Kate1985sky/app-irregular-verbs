@@ -1,16 +1,23 @@
 .item {
-    text-decoration: none;
-    padding: 15px;
-    font-size: 23px;
-    font-family: cursive;
-    color: black;
-    background-color: antiquewhite;
-    border-radius: 13px;
-    margin-left: 13px;
+  text-decoration: none;
+  padding: 15px;
+  font-size: 23px;
+  font-family: cursive;
+  color: black;
+  background-color: antiquewhite;
+  border-radius: 13px;
+  margin-left: 13px;
 }
+.item:hover,
+:focus {
+  background-color: bisque;
+  transition: 0.5s;
+}
+
 .item:last-child {
-    background-color:brown;
-    color: white;
+  background-color: brown;
+  color: white;
 }
-
-
+/* .item:isActive {
+    background-color:aqua;
+} */

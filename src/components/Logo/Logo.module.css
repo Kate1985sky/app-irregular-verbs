@@ -1,10 +1,9 @@
 .logo {
-    width: 130px;
-    height: 85px;
     margin-right: 35px;
 }
 
 .photo {
     width: 130px;
     height: 60px;
+    display: block;
 }

@@ -1,70 +1,44 @@
 import React from "react";
-import { useEditor } from "../../hooks/EditorProvider";
 import styles from "./Levels.module.css";
+import {useParams, Link} from 'react-router-dom';
 
 export const Levels = () => {
-  const value = useEditor();
-
-  const handleFilterCard = (e) => {
-    
-    // const filterLevels = value.words.filter(
-    //   (item) => item.levels === id
-    // );
-
-    console.log(e);
-  };
+  const params = useParams();
+  
   
   return (
     <div className={styles.filter}>
-      <button className={styles.btn}>All</button>
-      <button
-        type="button"
-        data-id={"A1"}
-        onClick={(e) => handleFilterCard(e)}
+      <Link to="/all-words" className={styles.btn}>All {typeof params.level === 'a1' ? "is-active" : ""}</Link>
+      <Link to="/all-words/a1"
         className={styles.btn}
       >
-        A1
-      </button>
-      <button
-        type="button"
-        data-id={"A2"}
-        onClick={(e) => handleFilterCard(e)}
+        A1 {typeof params.level === 'a1' ? "is-active" : ""}
+      </Link>
+      <Link to="/all-words/a2"
         className={styles.btn}
       >
-        A2
-      </button>
-      <button
-        type="button"
-        data-id={"B1"}
-        onClick={(e) => handleFilterCard(e)}
+        A2 {typeof params.level === 'a2' ? "is-active" : ""}
+      </Link>
+      <Link to="/all-words/b1"
         className={styles.btn}
       >
-        B1
-      </button>
-      <button
-        type="button"
-        data-id={"B2"}
-        onClick={(e) => handleFilterCard(e)}
+        B1 {typeof params.level === 'b1' ? "is-active" : ""}
+      </Link>
+      <Link to="/all-words/b2"
         className={styles.btn}
       >
-        B2
-      </button>
-      <button
-        type="button"
-        data-id={"C1"}
-        onClick={(e) => handleFilterCard(e)}
+        B2 {typeof params.level === 'b2' ? "is-active" : ""}
+      </Link>
+      <Link to="/all-words/c1"
         className={styles.btn}
       >
-        C1
-      </button>
-      <button
-        type="button"
-        data-id={"C2"}
-        onClick={(e) => handleFilterCard(e)}
+        C1 {typeof params.level === 'c1' ? "is-active" : ""}
+      </Link>
+      <Link to="/all-words/c2"
         className={styles.btn}
       >
-        C2
-      </button>
+        C2 {typeof params.level === 'c1' ? "is-active" : ""}
+      </Link>
     </div>
   );
 };

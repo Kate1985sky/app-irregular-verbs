@@ -1,10 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styles from "./Navigation.module.css";
-import { useEditor } from "../../hooks/EditorProvider";
+
+
 
 export const Navigation = () => {
-  const value = useEditor();
 
   return (
    
@@ -13,16 +13,16 @@ export const Navigation = () => {
         <Link className={styles.item} to="/word-of-the-day">
           word of the day
         </Link>
-        <Link className={styles.item} to="/all-words">
+        <Link className={styles.item} to="/all-words/">
           all words
         </Link>
         <Link className={styles.item} to="/search">
           search
         </Link>
-        <Link className={styles.item} to="/create">
+        <NavLink className={styles.item} to="/create">
           {" "}
           + create
-        </Link>
+        </NavLink>
       </ul>
     </nav>
     

@@ -87,12 +87,14 @@ button {
   width: 150px;
   height: 45px;
   margin: 0 auto;
+  margin-bottom: 15px;
   border-radius: 10px;
   background-color: brown;
   color: white;
   border: none;
 }
 .title {
+  display: block;
   padding-bottom: 10px;
 }
 .titleMain {

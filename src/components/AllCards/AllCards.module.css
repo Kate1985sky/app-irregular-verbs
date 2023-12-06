@@ -1,39 +1,18 @@
 .cards {
-    width: 600px;
-    height: 100%;
-    display: flex;
-    align-items:flex-start;
-    flex-wrap: wrap;
-    margin-top: 35px;
-  
+  width: 600px;
+  height: 100%;
+  display: flex;
+  margin: 0 auto;
 }
-.card {
-    width: 250px;
-    height: 150px;
-    border-radius: 13px;
-    border: 1px solid brown;
-    padding: 10px;
+.listCards {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 25px;
 }
+
 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.blockLevel {
-    width: 240px;
-    height: 35px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    background-color:aqua;
-    border-radius: 13px;
-    cursor: pointer;
-}
-.items {
-    width: 250px;
-    height: 45px;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }

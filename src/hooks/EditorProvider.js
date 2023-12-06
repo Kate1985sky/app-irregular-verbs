@@ -19,7 +19,7 @@ const EditorProvider = ({ children, dataKey = "irregular-verbs-store" }) => {
       {
         ...newWord,
         id: crypto.randomUUID(),
-        completed: false
+        data: new Date()
       }
     ])
   };

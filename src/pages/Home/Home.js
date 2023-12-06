@@ -14,9 +14,9 @@ export const Home = () => {
         <p>a font side</p>
         <div className={styles.card}>
           <div className={styles.incard}>
-            <span>A1</span>
-            <span className={styles.items}>pay - paid - paid</span>
-            <span className={styles.items}>
+            <span className={styles.span}>A1</span>
+            <span className={styles.span}>pay - paid - paid</span>
+            <span className={styles.span}>
               He paid the bills and came back home
             </span>
           </div>
@@ -24,20 +24,26 @@ export const Home = () => {
         <p>a back side</p>
         <div className={styles.card}>
           <div className={styles.incard}>
-            <span>A1</span>
+            <span className={styles.span}>A1</span>
+            <span className={styles.span}>платити</span>
+            <span className={styles.span}>
+              Він оплатив рахунки та повернувся додому
+            </span>
           </div>
-          <span className={styles.items}>платити</span>
-          <span className={styles.items}>
-            Він оплатив рахунки та повернувся додому
-          </span>
         </div>
       </div>
       <hr className={styles.line} />
       <div className="info">
-        <h3 className={styles.titleInfo}>Create new cards and track your progress</h3>
+        <h3 className={styles.titleInfo}>
+          Create new cards and track your progress
+        </h3>
         <ol>
-          <li className={styles.info}>Use a special page for creating your own cards</li>
-          <li className={styles.info}>On all cards pages filter cards by their status</li>
+          <li className={styles.info}>
+            Use a special page for creating your own cards
+          </li>
+          <li className={styles.info}>
+            On all cards pages filter cards by their status
+          </li>
         </ol>
       </div>
     </div>

@@ -1,0 +1,13 @@
+.wrapper {
+    width: 600px;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+}
+.oneCard {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
