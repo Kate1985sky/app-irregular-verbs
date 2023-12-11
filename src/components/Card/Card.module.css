@@ -3,8 +3,8 @@
   height: 150px;
   display: flex;
   flex-direction: column;
-  border-radius: 13px;
-  border: 1px solid brown;
+  border-radius: 15px;
+  border: 1px solid black;
   text-align: center;
 }
 ul {
@@ -14,14 +14,15 @@ ul {
 }
 .blockLevel {
   width: 240px;
-  height: 35px;
+  height: 45px;
   display: flex;
-  justify-content: center;
-  text-align: center;
+  justify-content: space-between;
   align-items: center;
-  background-color: aqua;
   border-radius: 13px;
   cursor: pointer;
+}
+.blockLevel:first-child {
+  padding-left: 10px;
 }
 
 .items {
@@ -31,8 +32,24 @@ ul {
   justify-content: space-around;
   margin-top: 15px;
   word-spacing: normal;
+  font-family: cursive;
+  font-weight: 100;
+  opacity: 0.5;
+}
+.items:last-child {
+  color: grey;
 }
 
 .itemCard {
   padding: 15px;
+}
+.titleItem {
+  color: rgb(240, 236, 236);
+
+  font-family: cursive;
+  font-weight: 100;
+}
+.level {
+  font-family: cursive;
+  color: white;
 }

@@ -10,25 +10,21 @@ const defaultFormValues = {
   "example of usage": "",
   "translate of the world": "",
   "translate of the example": "",
-  "levels": "A1", 
 };
 
 export const Create = () => {
   const [formState, setFormState] = useState(defaultFormValues);
   const value = useEditor();
 
-
-
   const submitForm = (event) => {
     event.preventDefault();
     value.addWord(formState);
     resetForm();
-  }
+  };
 
   const resetForm = () => {
     setFormState(defaultFormValues);
   };
-
 
   const changeHeandler = (e) => {
     setFormState((prevState) => ({
@@ -121,9 +117,7 @@ export const Create = () => {
               <option value="C1">C1</option>
               <option value="C2">C2</option>
             </select>
-            <button type="submit">
-              Save
-            </button>
+            <button type="submit">Save</button>
           </form>
         </div>
       </div>

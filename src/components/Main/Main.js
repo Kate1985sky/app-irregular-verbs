@@ -3,7 +3,7 @@ import { Home } from "../../pages/Home/Home";
 import { WordOfTheDay } from "../../pages/WordOfTheDay/WordOfTheDay";
 import { NotFound } from "../../pages/NotFound";
 import { AllWords } from "../../pages/AllWords/AllWords";
-import { Routes, Route, useParams } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import { Create } from "../../pages/Create/Create";
 import styles from "./Main.module.css";
 import { ContentBox } from "../ContentBox/ContentBox";

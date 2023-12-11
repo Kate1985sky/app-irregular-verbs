@@ -23,7 +23,7 @@ export const Home = () => {
         </div>
         <p>a back side</p>
         <div className={styles.card}>
-          <div className={styles.incard}>
+          <div className={styles.backcard}>
             <span className={styles.span}>A1</span>
             <span className={styles.span}>платити</span>
             <span className={styles.span}>

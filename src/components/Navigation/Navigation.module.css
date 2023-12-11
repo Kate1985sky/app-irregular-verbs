@@ -3,21 +3,23 @@
   padding: 15px;
   font-size: 23px;
   font-family: cursive;
-  color: black;
-  background-color: antiquewhite;
+  color: brown;
   border-radius: 13px;
+  border-style: 1px solid brown;
   margin-left: 13px;
-}
-.item:hover,
-:focus {
-  background-color: bisque;
   transition: 0.5s;
 }
-
-.item:last-child {
+.button {
   background-color: brown;
   color: white;
 }
-/* .item:isActive {
-    background-color:aqua;
-} */
+.is-active {
+  background-color: brown;
+  color: white;
+  opacity: 0.5;
+}
+.is-disabled {
+  background-color: grey;
+  color: rgb(74, 74, 122);
+  pointer-events: none;
+}

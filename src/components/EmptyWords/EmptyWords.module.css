@@ -1,0 +1,12 @@
+.wrapper {
+    width: 600px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.title {
+    font-family: cursive;
+    font-size: 23px;
+    font-weight: 500;
+}
