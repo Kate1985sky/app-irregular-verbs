@@ -21,7 +21,8 @@ export function WordOfTheDay() {
 
     if (storeWord) {
       const parseWord = JSON.parse(storeWord);
-      if (parseWord.date === todayDate) {
+      
+      if (parseWord.data === todayDate) {
         setWord(parseWord);
         return;
       }
