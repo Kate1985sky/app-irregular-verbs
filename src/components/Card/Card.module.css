@@ -42,6 +42,7 @@ ul {
 
 .itemCard {
   padding: 15px;
+  list-style: none;
 }
 .titleItem {
   color: rgb(240, 236, 236);

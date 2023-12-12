@@ -3,17 +3,19 @@ import { Header } from "./components/Header/Header";
 import { BrowserRouter } from "react-router-dom";
 import { Main } from "./components/Main/Main";
 import { EditorProvider } from "./hooks/EditorProvider";
-
+import { ContentBox } from "./components/ContentBox/ContentBox";
 
 function App() {
   return (
     <div>
       <EditorProvider>
-      <BrowserRouter>
-        <Header />
-        <Main />
-        <Footer />
-      </BrowserRouter>
+        <BrowserRouter>
+          <ContentBox>
+            <Header />
+            <Main />
+            <Footer />
+          </ContentBox>
+        </BrowserRouter>
       </EditorProvider>
     </div>
   );
