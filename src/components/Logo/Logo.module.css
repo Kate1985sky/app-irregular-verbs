@@ -1,9 +1,4 @@
-.logo {
-    margin-right: 35px;
-}
-
-.photo {
+.container {
     width: 130px;
     height: 60px;
-    display: block;
 }

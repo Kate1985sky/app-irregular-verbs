@@ -1,48 +1,30 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styles from "./Navigation.module.css";
-import { useLocation } from "react-router-dom";
+import { Nav, Navbar, Stack } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
 
 export const Navigation = () => {
-  const { pathname } = useLocation();
-
   return (
-    <nav className={styles.container}>
-      <ul className={styles.list}>
-        <Link
-          className={`${styles.item} ${
-            pathname === "/word-of-the-day" ? styles["is-active"] : ""
-          }`}
-          to="/word-of-the-day"
-        >
-          word of the day
-        </Link>
-        <Link
-          className={`${styles.item} ${
-            pathname.startsWith("/all-words/") ? styles["is-active"] : ""
-          }`}
-          to="/all-words/"
-        >
-          all words
-        </Link>
-        <Link
-          className={`${styles.item} ${
-            pathname === "/search" ? styles["is-active"] : ""
-          }`}
-          to="/search"
-        >
-          search
-        </Link>
-        <Link
-          className={`${styles.item} ${styles.button} ${
-            pathname === "/create" ? styles["is-disabled"] : ""
-          }`}
-          to="/create"
-        >
-          {" "}
-          + create
-        </Link>
-      </ul>
-    </nav>
+    <Navbar className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand href="/">
+          <img
+            src="/images/logo.webp"
+            width="110"
+            height="50"
+            alt="Logo should be here"
+          />
+        </Navbar.Brand>
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Stack direction="horizontal" gap={4}>
+            <Nav.Link href="/word-of-the-day">Word-of-the-day</Nav.Link>
+            <Nav.Link href="/all-words/">All-words</Nav.Link>
+            <Nav.Link href="/search">Search</Nav.Link>
+            <div className="vr"/>
+            <Nav.Link href="/create">+ Create</Nav.Link>
+            </Stack>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };

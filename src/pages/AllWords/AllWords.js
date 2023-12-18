@@ -7,10 +7,8 @@ export const AllWords = () => {
   
   return (
     <ContentBox>
-      <div className={styles.wrapper}>
         <Levels />
         <AllCards />
-      </div>
-    </ContentBox>
+     </ContentBox>
   );
 };
