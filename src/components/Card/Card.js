@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import styles from "./Card.module.css";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Container, CardBody, CardText, Card } from "react-bootstrap";
 
 const palette = {
   a1: { frontside: "rgb(250, 112, 112)", backside: "rgb(247, 171, 171)" },
@@ -12,9 +12,10 @@ const palette = {
   c2: { frontside: "blue", backside: "lightblue" },
 };
 
-export const Card = ({ card }) => {
+export const OneCard = ({ card }) => {
+  
   const [frontSide, setFrontSide] = useState(false);
-  console.log(frontSide);
+
 
   const wordsWithSeparator = [
     card["1st form"],
@@ -22,56 +23,60 @@ export const Card = ({ card }) => {
     card["3st form"],
   ].join(" - ");
 
-  const cardPaletteByLevel = palette[card.levels.toLowerCase()];
+  const cardPaletteByLevel = palette[card.level.toLowerCase()];
+  
 
   const sideColorKey = frontSide ? "frontside" : "backside";
+
   const colorBySide = cardPaletteByLevel[sideColorKey];
 
   return (
-    
-    <li className={styles.itemCard}>
-    {frontSide ? (
-      <div className={styles.card}>
-        <div
-          style={{ backgroundColor: colorBySide }}
-          className={styles.blockLevel}
-        >
-          <span className={styles.level}>{card.levels}</span>
-          <span
-            className={styles.titleItem}
-            onClick={() => setFrontSide(false)}
-          >
-            Show translation
-          </span>
-        </div>
-        <span className={styles.items}>{wordsWithSeparator}</span>
-        <span className={styles.items}>{card["example of usage"]}</span>
-      </div>
-    ) : (
-      <div className={styles.card}>
-        <div
-          style={{ backgroundColor: colorBySide }}
-          className={styles.blockLevel}
-        >
-          <span className={styles.level}>{card.levels}</span>
-          <span
-            className={styles.titleItem}
-            onClick={() => setFrontSide(true)}
-          >
-            Show original
-          </span>
-        </div>
-        <span className={styles.items}>{card["translate of the world"]}</span>
-        <span className={styles.items}>
-          {card["translate of the example"]}
-        </span>
-      </div>
-    )}
-  </li>
-
-   
-       
+    <Container>
+      <Row>
+        <Col>
+          <li className={styles.itemCard}>
+            {frontSide ? (
+              <Card>
+                <div
+                  style={{ backgroundColor: colorBySide }}
+                  className={styles.blockLevel}
+                >
+                  <span className={styles.level}>{card.level}</span>
+                  <span
+                    className={styles.titleItem}
+                    onClick={() => setFrontSide(false)}
+                  >
+                    Show translation
+                  </span>
+                </div>
+                <CardBody>
+                  <CardText>{wordsWithSeparator}</CardText>
+                  <CardText>{card["example of usage"]}</CardText>
+                </CardBody>
+              </Card>
+            ) : (
+              <Card>
+                <div
+                  style={{ backgroundColor: colorBySide }}
+                  className={styles.blockLevel}
+                >
+                  <span className={styles.level}>{card.level}</span>
+                  <span
+                    className={styles.titleItem}
+                    onClick={() => setFrontSide(true)}
+                  >
+                    Show original
+                  </span>
+                </div>
+                <CardBody>
+                  <CardText>{card["translate of the world"]}</CardText>
+                  <CardText>{card["translate of the example"]}</CardText>
+                </CardBody>
+              </Card>
+            )}
+          </li>
+        </Col>
+      </Row>
+    </Container>
   );
 };
-
-  

@@ -1,9 +1,13 @@
 import styles from "./EmptyWords.module.css";
+import {Row, Col} from 'react-bootstrap';
 
 export const EmptyWords = () => {
   return (
-    <div className={styles.wrapper}>
-      <h1 className={styles.title}>No words yet!</h1>
-    </div>
+    <Row>
+  <Col>
+  <h1>No words yet!</h1>
+  </Col>
+</Row>
   );
 };
+

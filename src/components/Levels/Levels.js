@@ -1,38 +1,49 @@
 import React from "react";
 // import styles from "./Levels.module.css";
-import { useParams, Link } from "react-router-dom";
-import Nav from "react-bootstrap/Nav";
+import { useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+import { Nav, NavItem } from "react-bootstrap";
 
 export const Levels = () => {
   const params = useParams();
 
   return (
-    <Nav variant="pills" defaultActiveKey="/home">
+    <Nav>
       <Nav.Item>
-        <Nav.Link href="/home">All</Nav.Link>
-      </Nav.Item>
-
-      <Nav.Item>
-        <Nav.Link eventKey="/all-words/a1">A1</Nav.Link>
-      </Nav.Item>
-
-      <Nav.Item>
-        <Nav.Link eventKey="/all-words/a2">A2</Nav.Link>
-      </Nav.Item>
-
-      <Nav.Item>
-        <Nav.Link eventKey="/all-words/b1">B1</Nav.Link>
-      </Nav.Item>
-
-      <Nav.Item>
-        <Nav.Link eventKey="/all-words/b2">B2</Nav.Link>
-      </Nav.Item>
-
-      <Nav.Item>
-        <Nav.Link eventKey="/all-words/c1">C1</Nav.Link>
+        <Nav.Link as={NavLink} to="/all-words">
+          All
+        </Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="/all-words/c2">C2</Nav.Link>
+        <Nav.Link as={NavLink} to="/all-words/a1">
+          A1
+        </Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link as={NavLink} to="/all-words/a2">
+          A2
+        </Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link as={NavLink} to="/all-words/b1">
+          B1
+        </Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link as={NavLink} to="/all-words/b2">
+          B2
+        </Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link as={NavLink} to="/all-words/c1">
+          C1
+        </Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link as={NavLink} to="/all-words/c2">
+          C2
+        </Nav.Link>
       </Nav.Item>
     </Nav>
   );
