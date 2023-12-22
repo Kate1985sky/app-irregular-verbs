@@ -10,6 +10,7 @@ import { WordsByLevel } from "../../pages/WordsByLevel/WordsByLevel";
 
 export function Main() {
   return (
+    <div className="h-75 d-flex justify-content-center">
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/word-of-the-day" element={<WordOfTheDay />} />
@@ -18,5 +19,6 @@ export function Main() {
       <Route path="/all-words/:level" element={<WordsByLevel />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
+    </div>
   );
 }

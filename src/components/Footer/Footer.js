@@ -6,10 +6,10 @@ import styles from "./Footer.module.css"
 
 export const Footer = () => {
   return (
-    <Container >
-      <Row >
+    <Container>
+      <Row>
         <Col className="py-4">
-          <hr className="w-50 mx-auto" />
+          <hr className="w-50 mx-auto"/>
           <h4 className="text-center mt-4"><small className="text-muted">Created with: Love in 2023</small></h4>
         </Col>
       </Row>

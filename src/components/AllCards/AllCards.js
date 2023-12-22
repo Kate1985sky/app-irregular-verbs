@@ -3,29 +3,24 @@ import { useEditor } from "../../hooks/EditorProvider";
 import { OneCard } from "../Card/Card";
 import styles from "./AllCards.module.css";
 import { EmptyWords } from "../EmptyWords/EmptyWords";
-import { Container, Row, Col } from "react-bootstrap";
 
 export const AllCards = () => {
   const value = useEditor();
 
   return (
-    <Container>
-      <Row>
-        <Col>
-          <ul className={styles.listCards}>
-            {value.words.length > 0 ? (
-              value.words.map((card) => (
-                <li className={styles.itemCard} key={card.id}>
-                  <OneCard card={card} />
-                </li>
-              ))
-            ) : (
-              <EmptyWords />
-            )}
-          </ul>
-        </Col>
-      </Row>
-    </Container>
+    <>
+      <ul className="d-flex justify-content-center flex-wrap">
+        {value.words.length > 0 ? (
+          value.words.map((card) => (
+            <li key={card.id}>
+              <OneCard card={card} />
+            </li>
+          ))
+        ) : (
+          <EmptyWords />
+        )}
+      </ul>
+    </>
   );
 };
 

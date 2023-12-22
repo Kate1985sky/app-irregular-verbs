@@ -4,7 +4,6 @@ import { useState } from "react";
 import Form from "react-bootstrap/Form";
 import { Container } from "react-bootstrap";
 import { Row, Col, Stack } from "react-bootstrap";
-import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
 const defaultFormValues = {
@@ -176,6 +175,7 @@ export const Create = () => {
                 onChange={changeHeandler}
                 aria-label="Default select example"
               >
+                <option>Select a level</option>
                 <option value="A1">A1</option>
                 <option value="A2">A2</option>
                 <option value="B1">B1</option>

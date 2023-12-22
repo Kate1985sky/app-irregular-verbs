@@ -33,7 +33,7 @@ export const OneCard = ({ card }) => {
   return (
     <Container>
       <Row>
-        <Col>
+        <Col className="d-flex justify-content-center">
           <li className={styles.itemCard}>
             {frontSide ? (
               <Card>
