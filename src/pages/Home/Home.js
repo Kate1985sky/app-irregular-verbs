@@ -1,62 +1,61 @@
 import React from "react";
 import styles from "./Home.module.css";
-import Card from "react-bootstrap/Card";
-import { CardBody, Container } from "react-bootstrap";
-import { Stack } from "react-bootstrap";
-import { ContentBox } from "../../components/ContentBox/ContentBox";
+import {Stack, Card, Row, Container, Col} from "react-bootstrap";
+
 
 export const Home = () => {
   return (
-    <ContentBox>
-      <Container className="text-center overflow-hidden">
-        <Stack className="row gy-4">
-          <Card.Title style={{ "font-size": "33px", "letter-spacing": "1px" }}>
-            Irregulars verbs easy!
-          </Card.Title>
-          <Card.Text style={{ "font-size": "20px" }}>
-            Learn irregulars verbs by our cards
-          </Card.Text>
-          <Card.Text>
-            <hr style={{ width: "165px", margin: "0 auto" }} />
-          </Card.Text>
-
-          <Card.Title>Meet our card</Card.Title>
-          <Card.Text>a font side</Card.Text>
-          <Card
-            style={{ width: "275px", margin: "0 auto", padding: 0}}
-          >
-            <Card.Body style={{ padding: 0, background: "rgb(250, 112, 112)"}}>
-              <Card.Title style={{ color: "white"}}>A1</Card.Title>
+      <Container>
+        <Row className="mb-5">
+          <Col>
+            <h1 className="text-center">Irregulars verbs easy!</h1>
+            <p className="text-center">Learn irregulars verbs by our cards</p>
+            <hr className="w-25 mx-auto" />
+          </Col>
+        </Row>
+        <Row>
+          <Col sm={{span: 3, offset: 4}} xs={12} className="mb-5 mx-auto">
+            <h2 className="text-center">Meet our card</h2>
+            <Stack gap={3} className="mb-3">
+            <p className="text-center">a font side</p>
+            <Card>
+              <div
+                className="px-3 py-1"
+                style={{ backgroundColor: "rgb(250, 112, 112)" }}>
+                <p className="text-white mb-0">A1</p>
+              </div>
+              <Card.Body>
+                <Card.Text>pay - paid - paid</Card.Text>
+                <Card.Text>
+                  <small className="text-muted">He paid the bills and came back home</small>
+                </Card.Text>
               </Card.Body>
-              <Card.Text>pay - paid - paid</Card.Text>
-              <Card.Text><small class="text-muted">He paid the bills and came back home</small></Card.Text>
-            
-          </Card>
-          <Card.Text>a back side</Card.Text>
-          <Card
-            style={{ width: "275px", margin: "0 auto", padding: 0}}
-          >
-            <Card.Body style={{ padding: 0, background: "rgb(247, 171, 171)"}}>
-              <Card.Title style={{ color: "white"}}>A1</Card.Title>
-              </Card.Body>
-              <Card.Text>платити</Card.Text>
-              <Card.Text><small class="text-muted">Він сплатив чек та повернувся додому</small></Card.Text>
-            
-          </Card>
-          <Card.Text>
-            <hr style={{ width: "165px", margin: "0 auto" }} />
-          </Card.Text>
-
-          <Card.Title>Create new cards and track your progress</Card.Title>
-          <Card.Text>
-            1. Use a special page for creating your own cards
-          </Card.Text>
-
-          <Card.Text>
-            2. On all cards pages filter cards by their status
-          </Card.Text>
-        </Stack>
+            </Card>
+              <p className="text-center">a back side</p>
+              <Card>
+                <div
+                  className="px-3 py-1"
+                  style={{ backgroundColor: "rgb(247, 171, 171)" }}>
+                  <p className="text-white mb-0">A1</p>
+                </div>
+                <Card.Body>
+                  <Card.Text>платити</Card.Text>
+                  <Card.Text>
+                    <small className="text-muted">Він сплатив чек та повернувся додому</small>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Stack>
+            <hr className="w-50 mx-auto" />
+          </Col>
+        </Row>
+        <Row>
+          <Col className="text-center">
+            <h2>Create new cards and track your progress</h2>
+            <p>1. Use a special page for creating your own cards</p>
+            <p>2. On all cards pages filter cards by their status</p>
+          </Col>
+        </Row>
       </Container>
-    </ContentBox>
   );
 };

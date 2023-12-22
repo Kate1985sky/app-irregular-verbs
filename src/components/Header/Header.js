@@ -1,13 +1,15 @@
-// import { Logo } from '../Logo/Logo';
-import { Navigation } from '../Navigation/Navigation';
+import { Container, Row, Col } from "react-bootstrap";
+import { Navigation } from "../Navigation/Navigation";
 import styles from "./Header.module.css";
 
-
 export const Header = () => {
-    return (
-      <div className={styles.container}>
-        {/* <Logo /> */}
-        <Navigation />
-      </div>
-    );
-  };
+  return (
+    <Container>
+      <Row className="mb-4">
+        <Col className="d-flex justify-content-center">
+          <Navigation />
+        </Col>
+      </Row>
+    </Container>
+  );
+};

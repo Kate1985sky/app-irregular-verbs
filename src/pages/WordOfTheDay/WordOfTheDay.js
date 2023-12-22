@@ -3,7 +3,7 @@ import { useEditor } from "../../hooks/EditorProvider";
 import { useEffect, useState } from "react";
 import { useRef } from "react";
 import { ContentBox } from "../../components/ContentBox/ContentBox";
-import { Card } from "../../components/Card/Card";
+import { OneCard } from "../../components/Card/Card";
 
 export function WordOfTheDay() {
   const value = useEditor();
@@ -36,5 +36,5 @@ export function WordOfTheDay() {
     );
   }, []);
 
-  return <ContentBox>{word?.word && <Card card={word.word} />}</ContentBox>;
+  return <ContentBox>{word?.word && <OneCard card={word.word} />}</ContentBox>;
 }
