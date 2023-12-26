@@ -9,7 +9,7 @@ export const AllCards = () => {
 
   return (
     <>
-      <ul className="d-flex justify-content-center flex-wrap">
+      <ul className="row row-cols-1 row-cols-md-2 g-4 w-50 p-2">
         {value.words.length > 0 ? (
           value.words.map((card) => (
             <li key={card.id}>
@@ -24,14 +24,4 @@ export const AllCards = () => {
   );
 };
 
-{
-  /* <div className={styles.cards}>
-      <ul className={styles.listCards}>
-        {value.words.length > 0 ? value.words.map((card) => (
-          <li className={styles.itemCard} key={card.id}>
-            <Card card={card} />
-          </li>
-        )) : <EmptyWords />}
-      </ul>
-    </div> */
-}
+

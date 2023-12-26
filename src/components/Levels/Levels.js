@@ -8,7 +8,7 @@ export const Levels = () => {
   const params = useParams();
 
   return (
-    <Nav className="d-flex justify-content-center">
+    <Nav className="py-4 d-flex justify-content-center">
       <Nav.Item
         className={`${styles.btn} ${
           typeof params.level === "undefined" ? styles["is-active"] : ""

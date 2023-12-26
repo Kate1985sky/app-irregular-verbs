@@ -12,7 +12,7 @@ export const AllWords = () => {
         </Col>
       </Row>
       <Row>
-        <Col>
+        <Col className="d-flex justify-content-center">
           <AllCards />
         </Col>
       </Row>

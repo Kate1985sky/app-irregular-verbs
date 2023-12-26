@@ -34,6 +34,7 @@ export const OneCard = ({ card }) => {
     <Container>
       <Row>
         <Col className="d-flex justify-content-center">
+          <div>
           <li className={styles.itemCard}>
             {frontSide ? (
               <Card>
@@ -75,6 +76,7 @@ export const OneCard = ({ card }) => {
               </Card>
             )}
           </li>
+          </div>
         </Col>
       </Row>
     </Container>
