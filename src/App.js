@@ -8,7 +8,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <div>
-      <EditorProvider>
+      <EditorProvider breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}
+    minBreakpoint="xxs">
         <BrowserRouter>
             <Header />
             <Main />
