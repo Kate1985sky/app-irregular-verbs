@@ -13,9 +13,7 @@ const palette = {
 };
 
 export const OneCard = ({ card }) => {
-  
   const [frontSide, setFrontSide] = useState(false);
-
 
   const wordsWithSeparator = [
     card["1st form"],
@@ -24,7 +22,6 @@ export const OneCard = ({ card }) => {
   ].join(" - ");
 
   const cardPaletteByLevel = palette[card.level.toLowerCase()];
-  
 
   const sideColorKey = frontSide ? "frontside" : "backside";
 
@@ -34,51 +31,56 @@ export const OneCard = ({ card }) => {
     <Container>
       <Row>
         <Col className="d-flex justify-content-center">
-          <div>
-          <li className={styles.itemCard}>
-            {frontSide ? (
-              <Card>
-                <div
-                  style={{ backgroundColor: colorBySide }}
-                  className={styles.blockLevel}
-                >
-                  <span className={styles.level}>{card.level}</span>
-                  <span
-                    className={styles.titleItem}
-                    onClick={() => setFrontSide(false)}
-                  >
-                    Show translation
-                  </span>
-                </div>
-                <CardBody>
-                  <CardText>{wordsWithSeparator}</CardText>
-                  <CardText>{card["example of usage"]}</CardText>
-                </CardBody>
-              </Card>
-            ) : (
-              <Card>
-                <div
-                  style={{ backgroundColor: colorBySide }}
-                  className={styles.blockLevel}
-                >
-                  <span className={styles.level}>{card.level}</span>
-                  <span
-                    className={styles.titleItem}
-                    onClick={() => setFrontSide(true)}
-                  >
-                    Show original
-                  </span>
-                </div>
-                <CardBody>
-                  <CardText>{card["translate of the world"]}</CardText>
-                  <CardText>{card["translate of the example"]}</CardText>
-                </CardBody>
-              </Card>
-            )}
-          </li>
-          </div>
+          {frontSide ? (
+            <Card className="container-fluid">
+              <div
+                style={{ backgroundColor: colorBySide }}
+                className="px-3 py-1 d-flex justify-content-between align-items-center container-fluid"
+              >
+                <p className="text-white">{card.level}</p>
+                <p className="text-white" onClick={() => setFrontSide(false)}>
+                  Show translation
+                </p>
+              </div>
+              <CardBody>
+                <CardText>{wordsWithSeparator}</CardText>
+                <CardText>{card["example of usage"]}</CardText>
+              </CardBody>
+            </Card>
+          ) : (
+            <Card className="container-fluid">
+              <div
+                style={{ backgroundColor: colorBySide }}
+                className="px-3 py-1 d-flex justify-content-between align-items-center container-fluid"
+              >
+                <p className="text-white">{card.level}</p>
+                <p className="text-white" onClick={() => setFrontSide(true)}>
+                  Show origional
+                </p>
+              </div>
+              <CardBody>
+                <CardText>{card["translate of the world"]}</CardText>
+                <CardText>{card["translate of the example"]}</CardText>
+              </CardBody>
+            </Card>
+          )}
         </Col>
       </Row>
     </Container>
   );
 };
+
+{
+  /* <div
+style={{ backgroundColor: colorBySide }}
+className={styles.blockLevel}
+>
+<span className={styles.level}>{card.level}</span>
+<span
+  className={styles.titleItem}
+  onClick={() => setFrontSide(true)}
+>
+  Show original
+</span>
+</div> */
+}

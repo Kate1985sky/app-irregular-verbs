@@ -25,7 +25,7 @@ export const WordsByLevel = () => {
         </Col>
       </Row>
       <Row>
-        <Col>
+        <Col className="d-flex justify-content-center">
           {filteredByLevel.length > 0 ? (
             <ul className={styles.oneCard}>
               {filteredByLevel.map((card) => (
