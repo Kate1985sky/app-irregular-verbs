@@ -7,7 +7,7 @@ export const AllWords = () => {
   return (
     <Container>
       <Row>
-        <Col className="py-4 d-flex justify-content-around">
+        <Col className="d-flex justify-content-center">
           <Levels />
         </Col>
       </Row>

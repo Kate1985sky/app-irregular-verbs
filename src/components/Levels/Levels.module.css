@@ -15,7 +15,9 @@
   align-items: center;
   text-align: center;
   text-decoration: none;
+  margin-right: 10px;
 }
+
 
 .btn.is-active {
   background-color: brown;

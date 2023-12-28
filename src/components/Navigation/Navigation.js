@@ -6,7 +6,7 @@ import Container from "react-bootstrap/Container";
 
 export const Navigation = () => {
   return (
-    <Navbar className="bg-body-tertiary">
+    <Navbar className="bg-body-tertiary navbar-expand-lg">
       <Container>
         <Navbar.Brand as={NavLink} to="/">
           <img

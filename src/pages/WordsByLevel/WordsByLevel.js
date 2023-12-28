@@ -20,14 +20,14 @@ export const WordsByLevel = () => {
   return (
     <Container>
       <Row>
-        <Col>
+        <Col className="w-auto">
           <Levels />
         </Col>
       </Row>
       <Row>
         <Col className="d-flex justify-content-center">
           {filteredByLevel.length > 0 ? (
-            <ul className={styles.oneCard}>
+            <ul className="row row-cols-1 row-cols-md-2 w-50 p-2">
               {filteredByLevel.map((card) => (
                 <OneCard card={card} key={card.id} />
               ))}

@@ -30,12 +30,12 @@ export const OneCard = ({ card }) => {
   return (
     <Container>
       <Row>
-        <Col className="d-flex justify-content-center">
+        <Col xs="12" className="d-flex justify-content-center">
           {frontSide ? (
-            <Card className="container-fluid">
+            <Card className="w-auto rounded-3">
               <div
                 style={{ backgroundColor: colorBySide }}
-                className="px-3 py-1 d-flex justify-content-between align-items-center container-fluid"
+                className="px-3 py-1 d-flex justify-content-between align-items-center"
               >
                 <p className="text-white">{card.level}</p>
                 <p className="text-white" onClick={() => setFrontSide(false)}>
@@ -48,10 +48,10 @@ export const OneCard = ({ card }) => {
               </CardBody>
             </Card>
           ) : (
-            <Card className="container-fluid">
+            <Card className="w-auto rounded-3">
               <div
                 style={{ backgroundColor: colorBySide }}
-                className="px-3 py-1 d-flex justify-content-between align-items-center container-fluid"
+                className="px-3 py-1 d-flex justify-content-between align-items-center"
               >
                 <p className="text-white">{card.level}</p>
                 <p className="text-white" onClick={() => setFrontSide(true)}>
