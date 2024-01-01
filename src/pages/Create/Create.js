@@ -1,4 +1,4 @@
-import style from "./Create.module.css";
+// import style from "./Create.module.css";
 import { useEditor } from "../../hooks/EditorProvider";
 import { useState } from "react";
 import Form from "react-bootstrap/Form";
@@ -18,7 +18,6 @@ const defaultFormValues = {
 
 export const Create = () => {
   const [formState, setFormState] = useState(defaultFormValues);
-  console.log(formState);
   const value = useEditor();
 
   const submitForm = (event) => {
@@ -44,7 +43,7 @@ export const Create = () => {
         <Stack gap={4}>
           <Row>
             <Col>
-              <p class="fw-weight-bolder">1. Add forms of a word</p>
+              <p className="fw-weight-bolder">1. Add forms of a word</p>
             </Col>
           </Row>
 

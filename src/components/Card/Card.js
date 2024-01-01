@@ -35,10 +35,10 @@ export const OneCard = ({ card }) => {
             <Card className="w-auto rounded-3">
               <div
                 style={{ backgroundColor: colorBySide }}
-                className="px-3 py-1 d-flex justify-content-between align-items-center"
+                className="px-3 py-2 d-flex justify-content-between"
               >
-                <p className="text-white">{card.level}</p>
-                <p className="text-white" onClick={() => setFrontSide(false)}>
+                <p className="text-white mb-0">{card.level}</p>
+                <p className="text-white mb-0" onClick={() => setFrontSide(false)}>
                   Show translation
                 </p>
               </div>
@@ -51,10 +51,10 @@ export const OneCard = ({ card }) => {
             <Card className="w-auto rounded-3">
               <div
                 style={{ backgroundColor: colorBySide }}
-                className="px-3 py-1 d-flex justify-content-between align-items-center"
+                className="px-3 py-2 d-flex justify-content-between"
               >
-                <p className="text-white">{card.level}</p>
-                <p className="text-white" onClick={() => setFrontSide(true)}>
+                <p className="text-white mb-0">{card.level}</p>
+                <p className="text-white mb-0" onClick={() => setFrontSide(true)}>
                   Show origional
                 </p>
               </div>

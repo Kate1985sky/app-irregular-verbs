@@ -19,7 +19,7 @@ export const Levels = () => {
               [styles["is-active"]]: params.level === navItem.level,
             })}
           >
-            <Nav.Link className={styles.link} as={NavLink} to={navItem.url}>
+            <Nav.Link className="d-flex justify-content-center align-items-center p-1" as={NavLink} to={navItem.url}>
               {navItem.title}
             </Nav.Link>
           </Nav.Item>
