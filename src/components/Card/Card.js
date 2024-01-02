@@ -13,6 +13,7 @@ const palette = {
 };
 
 export const OneCard = ({ card }) => {
+  
   const [frontSide, setFrontSide] = useState(false);
 
   const wordsWithSeparator = [
@@ -70,17 +71,4 @@ export const OneCard = ({ card }) => {
   );
 };
 
-{
-  /* <div
-style={{ backgroundColor: colorBySide }}
-className={styles.blockLevel}
->
-<span className={styles.level}>{card.level}</span>
-<span
-  className={styles.titleItem}
-  onClick={() => setFrontSide(true)}
->
-  Show original
-</span>
-</div> */
-}
+

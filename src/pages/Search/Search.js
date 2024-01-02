@@ -5,21 +5,35 @@ import { Container } from "react-bootstrap";
 import { useEditor } from "../../hooks/EditorProvider";
 import { OneCard } from "../../components/Card/Card";
 import { useState } from "react";
+import { Incorrect } from "../../components/Incorrect/Incorrect";
+import { NothingFound } from "../../components/NothingFound/NothingFound";
 
 export const Search = () => {
-  const [word, setWord] = useState(null);
+  const [search, setSearch] = useState(null);
   const value = useEditor();
 
+  const verbsFirstForm = value.words.map((word) => word["1st form"]);
+
+  const sliceVerb = verbsFirstForm.map((word) => word.slice(0, 3));
+
   const searchHeandler = (e) => {
-    const searchByWods = value.words.filter((word) => {
-      if(word["1st form"].split("").slice(0, 3) === e.target.value) {
-        return <OneCard />
-      };
+    const value = e.target.value.toLowerCase();
+    setSearch(value);
+  };
+
+  const showWords = () => {
+    sliceVerb.filter((word) => {
+      if (word === search) {
+        return <OneCard card={search} />;
+      } else if (word.length >= 1) {
+        return <Incorrect />
+      } else {
+        return <NothingFound />
+      }
     });
   };
 
-  const findWords = () => {};
-
+  
   return (
     <Container>
       <Form>
@@ -39,14 +53,16 @@ export const Search = () => {
             </Form.Group>
           </Col>
           <Col className="col-2">
+            <div className="w-auto">
             <button
               type="button"
-              onClick={findWords}
+              onClick={showWords}
               className="btn btn-primary btn-lg"
             ></button>
+            </div>
           </Col>
         </Row>
-      </Form>
+        </Form>
     </Container>
   );
 };
