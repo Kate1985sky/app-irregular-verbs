@@ -20,6 +20,7 @@ In the project I've learned what is react-router and how to use it. Created cust
 I've learned new hooks:
 1. useNavigate
 2. useSearchParams
+
 I've learned how works bootstrap.
 I've used and see how works methods startsWith for find it first 3-items.
  
