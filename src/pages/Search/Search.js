@@ -1,64 +1,82 @@
-import React from "react";
-import { Row, Col } from "react-bootstrap";
+import React, {useMemo} from "react";
+import {Row, Col} from "react-bootstrap";
 import Form from "react-bootstrap/Form";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { useEditor } from "../../hooks/EditorProvider";
 import { useState } from "react";
-import { Incorrect } from "../../components/Incorrect/Incorrect";
-import { NothingFound } from "../../components/NothingFound/NothingFound";
+import {OneCard} from "../../components/Card/Card";
+import {EmptyWords} from "../../components/EmptyWords/EmptyWords";
+import Button from "react-bootstrap/Button";
 
 
 export const Search = () => {
-  const [search, setSearch] = useState(null);
-  let navigate = useNavigate();
+  let [searchParams] = useSearchParams();
+  const searchRequest = searchParams.get("q");
   const value = useEditor();
 
-  // const verbsFirstForm = value.words.map((word) => word["1st form"]);
-  // const sliceVerb = verbsFirstForm.map((word) => word.slice(0, 3));
+  const [search, setSearch] = useState(searchRequest ?? "");
 
-  const searchHeandler = (e) => {
-    const value = e.target.value.toLowerCase();
-    setSearch(value);
-  };
+  let navigate = useNavigate();
 
-  const showWords = () => {
-    if (search.length >= 3) {
-      navigate("/search?q=${search}");
-    } else {
-      <Incorrect />;
-    }
-  };
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+    console.log("submit!", {search})
+
+      if (search.length >= 3) {
+        navigate(`/search?q=${search}`);
+      } else {
+        alert("sorry, at least 3 chars!")
+      }
+  }
+
+  const filteredBySearch = useMemo(() => {
+    return value.words.filter((word) => {
+
+      return word["1st form"].startsWith(searchRequest) || word["2st form"].startsWith(searchRequest) || word["3st form"].startsWith(searchRequest)
+
+    });
+  }, [value.words, searchRequest]);
 
   return (
-    <Container>
-      <Form>
-        <Row className="row justify-content-center mt-4">
-          <Col className="col-4">
-            <Form.Group
-              className="w-auto"
-              controlId="exampleForm.ControlInput1"
-            >
-              <Form.Control
-                onChange={searchHeandler}
-                value={value.formState}
-                type="text"
-                name="search"
-                placeholder="What would you like to find?"
-              />
-            </Form.Group>
-          </Col>
-          <Col className="col-2">
-            <div className="w-auto">
-              <button
-                type="button"
-                onClick={showWords}
-                className="btn btn-primary btn-lg"
-              ></button>
-            </div>
+      <Container>
+        <Row className="mt-3">
+          <Col xs="12" lg={{ span: 6, offset: 3 }}>
+            <Form onSubmit={submitHandler} className="mb-4">
+              <Row>
+                <Col xs="8">
+                  <Form.Control
+                    onChange={(e) => setSearch(e.target.value)}
+                    value={search}
+                    type="text"
+                    name="search"
+                    className="w-100"
+                    placeholder="What would you like to find?"
+                  />
+                </Col>
+                <Col xs="4">
+                  <Button
+                    type="submit"
+                    className="btn btn-info w-100"
+                  >
+                    Find!
+                  </Button>
+                </Col>
+              </Row>
+            </Form>
+            <Row>
+              {filteredBySearch.length > 0 ? filteredBySearch.map((card) => (
+                  <Col xs="12" lg="6" className="w-100">
+                    <OneCard card={card} key={card.id} />
+                  </Col>
+                )
+              ) : (
+                <EmptyWords />
+              )}
+            </Row>
           </Col>
         </Row>
-      </Form>
-    </Container>
+      </Container>
   );
 };

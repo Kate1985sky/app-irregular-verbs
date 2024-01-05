@@ -1,10 +1,9 @@
-import { OneCard } from "../../components/Card/Card";
 import React from "react";
+import { OneCard } from "../../components/Card/Card";
 import { useEditor } from "../../hooks/EditorProvider";
 import { Levels } from "../../components/Levels/Levels";
 import { useMemo } from "react";
 import { useParams } from "react-router-dom";
-import styles from "./WordsByLevel.module.css";
 import { EmptyWords } from "../../components/EmptyWords/EmptyWords";
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -19,24 +18,31 @@ export const WordsByLevel = () => {
 
   return (
     <Container>
-      <Row>
-        <Col className="w-auto">
-          <Levels />
+    <Row>
+      <Col xs="12">
+        <Levels />
+      </Col>
+    </Row>
+    <Row className="d-flex justify-content-center">
+      {filteredByLevel.length > 0 ? (
+        <ul className="row row-cols-1 row-cols-md-2 p-2">
+          {filteredByLevel.map((card) => (
+            <Col xs="12">
+              <OneCard card={card} key={card.id} />
+            </Col>
+          ))}
+        </ul>
+      ) : (
+        <Col xs="12">
+          <EmptyWords />
         </Col>
-      </Row>
-      <Row>
-        <Col className="d-flex justify-content-center">
-          {filteredByLevel.length > 0 ? (
-            <ul className="row row-cols-1 row-cols-md-2 w-50 p-2">
-              {filteredByLevel.map((card) => (
-                <OneCard card={card} key={card.id} />
-              ))}
-            </ul>
-          ) : (
-            <EmptyWords />
-          )}
-        </Col>
-      </Row>
-    </Container>
+      )}
+    </Row>
+  </Container>
+
   );
 };
+
+    
+    
+

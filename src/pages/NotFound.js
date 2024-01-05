@@ -1,6 +1,5 @@
 import React from "react";
 import {Row, Col} from "react-bootstrap";
-import styles from "./NotFound.module.css";
 
 export const NotFound = () => {
   return (

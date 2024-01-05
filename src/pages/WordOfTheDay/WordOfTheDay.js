@@ -1,4 +1,3 @@
-import styles from "./WordOfTheDay.module.css";
 import { useEditor } from "../../hooks/EditorProvider";
 import { useEffect, useState } from "react";
 import { useRef } from "react";

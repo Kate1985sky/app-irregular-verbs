@@ -9,7 +9,7 @@ export const AllCards = () => {
 
   return (
     <>
-      <ul className="row row-cols-1 row-cols-md-2 g-4 w-50 p-2">
+      <ul className="row row-cols-1 row-cols-md-2 g-4 p-2">
         {value.words.length > 0 ? (
           value.words.map((card) => (
             <li key={card.id}>

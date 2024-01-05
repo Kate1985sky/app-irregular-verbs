@@ -33,7 +33,7 @@ export const OneCard = ({ card }) => {
       <Row>
         <Col xs="12" className="d-flex justify-content-center">
           {frontSide ? (
-            <Card className="w-auto rounded-3">
+            <Card className="w-50 rounded-3">
               <div
                 style={{ backgroundColor: colorBySide }}
                 className="px-3 py-2 d-flex justify-content-between"
@@ -49,7 +49,7 @@ export const OneCard = ({ card }) => {
               </CardBody>
             </Card>
           ) : (
-            <Card className="w-auto rounded-3">
+            <Card className="w-50 rounded-3">
               <div
                 style={{ backgroundColor: colorBySide }}
                 className="px-3 py-2 d-flex justify-content-between"
