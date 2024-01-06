@@ -7,7 +7,7 @@ There are 5 pages: a home page, word-of-the-day, all-words, search, create . Als
 
 ### Tools and technologies
 
-The stack of the project is: react, react-hooks, react-router-dom, bootstrap.
+The stack of the project is: react, react-hooks, react-router-dom, bootstrap, library classNames.
 
 I've used React's built-in hooks to manage local state and create custom hooks for the convenience of not having to use props.
 
@@ -23,6 +23,7 @@ I've learned new hooks:
 
 I've learned how works bootstrap.
 I've used and see how works methods startsWith for find it first 3-items.
+I've learned new library classNames.
  
 
 

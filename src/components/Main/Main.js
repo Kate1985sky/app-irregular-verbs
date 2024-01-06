@@ -5,12 +5,11 @@ import { NotFound } from "../../pages/NotFound";
 import { AllWords } from "../../pages/AllWords/AllWords";
 import { Routes, Route } from "react-router-dom";
 import { Create } from "../../pages/Create/Create";
-import {Search} from '../../pages/Search/Search';
+import { Search } from "../../pages/Search/Search";
 import { WordsByLevel } from "../../pages/WordsByLevel/WordsByLevel";
 
 export function Main() {
   return (
-    <div className="d-flex justify-content-center">
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/word-of-the-day" element={<WordOfTheDay />} />
@@ -20,6 +19,5 @@ export function Main() {
       <Route path="/all-words/:level" element={<WordsByLevel />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
-    </div>
   );
 }
