@@ -101,7 +101,7 @@ export const Create = () => {
           </Row>
           <Row>
             <Col>
-              <p class="fw-weight-bolder">2. Add an example of usage</p>
+              <p className="fw-weight-bolder">2. Add an example of usage</p>
             </Col>
           </Row>
 
@@ -121,7 +121,7 @@ export const Create = () => {
 
           <Row>
             <Col md="auto">
-              <p class="fw-weight-bolder">3. Add translations</p>
+              <p className="fw-weight-bolder">3. Add translations</p>
               <Form.Group
                 className="mb-3"
                 controlId="exampleForm.ControlInput1"
@@ -155,7 +155,7 @@ export const Create = () => {
 
           <Row>
             <Col md="auto">
-              <p class="fw-weight-bolder">4. Select a level of the word</p>
+              <p className="fw-weight-bolder">4. Select a level of the word</p>
               <Form.Group
                 size="sm"
                 className="mb-3"
