@@ -1,56 +1,5 @@
-.card {
-  width: 250px;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 15px;
-  border: 1px solid black;
-  text-align: center;
-}
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-.blockLevel {
-  width: 240px;
-  height: 45px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 13px;
-  cursor: pointer;
-}
-.blockLevel:first-child {
-  padding-left: 10px;
-}
-
-.items {
-  width: 250px;
-  height: 45px;
-  display: flex;
-  justify-content: space-around;
-  margin-top: 15px;
-  word-spacing: normal;
-  font-family: cursive;
-  font-weight: 100;
-  opacity: 0.5;
-}
-.items:last-child {
-  color: grey;
-}
-
-.itemCard {
-  padding: 15px;
-  list-style: none;
-}
-.titleItem {
-  color: rgb(240, 236, 236);
-
-  font-family: cursive;
-  font-weight: 100;
-}
-.level {
-  font-family: cursive;
-  color: white;
 }

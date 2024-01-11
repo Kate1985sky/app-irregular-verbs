@@ -1,9 +1,9 @@
-import styles from "./WordOfTheDay.module.css";
 import { useEditor } from "../../hooks/EditorProvider";
 import { useEffect, useState } from "react";
 import { useRef } from "react";
-import { ContentBox } from "../../components/ContentBox/ContentBox";
 import { OneCard } from "../../components/Card/Card";
+import { Col, Row, Container } from "react-bootstrap";
+import { EmptyWords } from "../../components/EmptyWords/EmptyWords";
 
 export function WordOfTheDay() {
   const value = useEditor();
@@ -21,7 +21,7 @@ export function WordOfTheDay() {
 
     if (storeWord) {
       const parseWord = JSON.parse(storeWord);
-      
+
       if (parseWord.data === todayDate) {
         setWord(parseWord);
         return;
@@ -36,5 +36,19 @@ export function WordOfTheDay() {
     );
   }, []);
 
-  return <ContentBox>{word?.word && <OneCard card={word.word} />}</ContentBox>;
+  return (
+    <Container>
+      <Row>
+        <Col xs="12" lg={{ span: 4, offset: 5 }} className="w-25">
+          {word?.word ? (
+            <OneCard card={word.word} />
+          ) : (
+            <Col xs="12">
+              <EmptyWords />
+            </Col>
+          )}
+        </Col>
+      </Row>
+    </Container>
+  );
 }

@@ -3,16 +3,20 @@ import { Header } from "./components/Header/Header";
 import { BrowserRouter } from "react-router-dom";
 import { Main } from "./components/Main/Main";
 import { EditorProvider } from "./hooks/EditorProvider";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
     <div>
       <EditorProvider>
         <BrowserRouter>
+          <div className="page-wrapper">
             <Header />
-            <Main />
+            <div className="main-wrapper">
+              <Main />
+            </div>
             <Footer />
+          </div>
         </BrowserRouter>
       </EditorProvider>
     </div>

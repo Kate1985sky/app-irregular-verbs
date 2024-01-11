@@ -1,4 +1,3 @@
-import styles from "./EmptyWords.module.css";
 import { Row, Col } from "react-bootstrap";
 
 export const EmptyWords = () => {

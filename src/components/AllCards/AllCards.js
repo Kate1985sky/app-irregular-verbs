@@ -1,37 +1,31 @@
 import React from "react";
 import { useEditor } from "../../hooks/EditorProvider";
 import { OneCard } from "../Card/Card";
-import styles from "./AllCards.module.css";
 import { EmptyWords } from "../EmptyWords/EmptyWords";
+import { Container, Row, Col } from "react-bootstrap";
 
 export const AllCards = () => {
   const value = useEditor();
 
   return (
-    <>
-      <ul className="d-flex justify-content-center flex-wrap">
+    <Container>
+      <Row className="d-flex justify-content-center">
         {value.words.length > 0 ? (
-          value.words.map((card) => (
-            <li key={card.id}>
-              <OneCard card={card} />
-            </li>
-          ))
+          <ul className="w-50 row row-cols-1 row-cols-md-2 p-2">
+            {value.words.map((card) => (
+              <Col xs="12" sm="6">
+                <li key={card.id}>
+                  <OneCard card={card} />
+                </li>
+              </Col>
+            ))}
+          </ul>
         ) : (
-          <EmptyWords />
+          <Col xs="12">
+            <EmptyWords />
+          </Col>
         )}
-      </ul>
-    </>
+      </Row>
+    </Container>
   );
 };
-
-{
-  /* <div className={styles.cards}>
-      <ul className={styles.listCards}>
-        {value.words.length > 0 ? value.words.map((card) => (
-          <li className={styles.itemCard} key={card.id}>
-            <Card card={card} />
-          </li>
-        )) : <EmptyWords />}
-      </ul>
-    </div> */
-}

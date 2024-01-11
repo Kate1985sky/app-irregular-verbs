@@ -1,10 +1,12 @@
 import React from "react";
-import styles from "./NotFound.module.css";
+import {Row, Col} from "react-bootstrap";
 
 export const NotFound = () => {
-    return (
-        <div className={styles.wrapper}>
-          <h1 className={styles.title}>Sorry, the Page is not found 😱</h1>
-        </div>
-      );
-}
+  return (
+    <Row>
+      <Col className="mt-5">
+        <h1 className="text-centre">Sorry, the Page is not found 😱</h1>
+      </Col>
+    </Row>
+  );
+};

@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./Home.module.css";
 import {Stack, Card, Row, Container, Col} from "react-bootstrap";
 
 
@@ -14,7 +13,7 @@ export const Home = () => {
           </Col>
         </Row>
         <Row>
-          <Col sm={{span: 3, offset: 4}} xs={12} className="mb-5 mx-auto">
+          <Col sm={{span: 4, offset: 4}} className="mb-5 mx-auto">
             <h2 className="text-center">Meet our card</h2>
             <Stack gap={3} className="mb-3">
             <p className="text-center">a font side</p>

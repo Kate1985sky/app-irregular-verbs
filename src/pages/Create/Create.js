@@ -1,4 +1,3 @@
-import style from "./Create.module.css";
 import { useEditor } from "../../hooks/EditorProvider";
 import { useState } from "react";
 import Form from "react-bootstrap/Form";
@@ -18,7 +17,6 @@ const defaultFormValues = {
 
 export const Create = () => {
   const [formState, setFormState] = useState(defaultFormValues);
-  console.log(formState);
   const value = useEditor();
 
   const submitForm = (event) => {
@@ -44,7 +42,7 @@ export const Create = () => {
         <Stack gap={4}>
           <Row>
             <Col>
-              <p class="fw-weight-bolder">1. Add forms of a word</p>
+              <p className="fw-weight-bolder">1. Add forms of a word</p>
             </Col>
           </Row>
 
@@ -103,7 +101,7 @@ export const Create = () => {
           </Row>
           <Row>
             <Col>
-              <p class="fw-weight-bolder">2. Add an example of usage</p>
+              <p className="fw-weight-bolder">2. Add an example of usage</p>
             </Col>
           </Row>
 
@@ -123,7 +121,7 @@ export const Create = () => {
 
           <Row>
             <Col md="auto">
-              <p class="fw-weight-bolder">3. Add translations</p>
+              <p className="fw-weight-bolder">3. Add translations</p>
               <Form.Group
                 className="mb-3"
                 controlId="exampleForm.ControlInput1"
@@ -157,7 +155,7 @@ export const Create = () => {
 
           <Row>
             <Col md="auto">
-              <p class="fw-weight-bolder">4. Select a level of the word</p>
+              <p className="fw-weight-bolder">4. Select a level of the word</p>
               <Form.Group
                 size="sm"
                 className="mb-3"

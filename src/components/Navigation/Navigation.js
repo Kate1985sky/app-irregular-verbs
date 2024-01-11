@@ -1,12 +1,11 @@
 import React from "react";
-import styles from "./Navigation.module.css";
 import { Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 
 export const Navigation = () => {
   return (
-    <Navbar className="bg-body-tertiary">
+    <Navbar className="bg-body-tertiary navbar-expand-lg">
       <Container>
         <Navbar.Brand as={NavLink} to="/">
           <img
