@@ -6,7 +6,7 @@ export const Logo = () => {
     <Row>
       <Col>
         <img
-          src="/images/logo.webp"
+          src="../../../public/images/logo.webp"
           width="110"
           height="50"
           alt="Logo should be here"
