@@ -9,7 +9,7 @@ export const Navigation = () => {
       <Container>
         <Navbar.Brand as={NavLink} to="/">
           <img
-            src="/images/logo.webp"
+            src="../../../public/images/logo.webp"
             width="110"
             height="50"
             alt="Logo should be here"
