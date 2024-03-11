@@ -27,7 +27,7 @@ I've learned new library classNames.
  
 
 
-### How to work with the project
+### How to run project
 
 This project was bootstrapped with Create React App.
 
