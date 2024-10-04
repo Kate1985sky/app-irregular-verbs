@@ -11,10 +11,18 @@
   text-decoration: none;
   margin-right: 10px;
 }
+.level-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
 .btn.is-active {
-  background-color: brown;
-  color: white;
+  background-color: rgb(129, 197, 242);
   transition: 0.5s;
 }
+
+
+
 

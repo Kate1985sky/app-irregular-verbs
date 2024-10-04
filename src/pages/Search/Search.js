@@ -66,7 +66,7 @@ export const Search = () => {
           <Row>
             {filteredBySearch.length > 0 ? (
               filteredBySearch.map((card) => (
-                <Col xs="12" lg="6" className="w-50">
+                <Col key={card.id} xs="12" lg="6" className="w-50">
                   <OneCard card={card} key={card.id} />
                 </Col>
               ))
